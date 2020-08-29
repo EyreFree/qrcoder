@@ -1,3 +1,7 @@
-## 0.0.1
+# Change Log
 
-* TODO: Describe initial release.
+-----
+
+## [0.1.0](https://github.com/EyreFree/qrcoder/releases/tag/0.1.0) (2020-09-14)
+
+- Generate qrcode matrix.

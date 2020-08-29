@@ -50,7 +50,16 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: FlatButton(
+            child: Text("Test"),
+            onPressed: () async {
+              var matrixString =
+                  await Qrcoder.generateQRCodeMatrixStringFilledAndPatchedWith(
+                      '2333',
+                      hasBorder: false);
+              print(matrixString);
+            },
+          ),
         ),
       ),
     );
