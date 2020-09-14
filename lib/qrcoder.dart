@@ -1,19 +1,11 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:flutter/services.dart';
-
 import 'qr_error_correct_level.dart';
 import 'qrcode.dart';
 
 class Qrcoder {
-  static const MethodChannel _channel = const MethodChannel('qrcoder');
-
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
-
+  
   static Future<List<List<int>>> generateQRCodeMatrix(String text,
       {Encoding encoding = utf8,
       QRErrorCorrectLevel errorCorrectLevel = QRErrorCorrectLevel.H,

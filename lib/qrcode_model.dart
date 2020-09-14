@@ -1,8 +1,6 @@
 import 'dart:convert' show Encoding, utf8;
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
-
 import 'qr_rs_block.dart';
 import 'an_error.dart';
 import 'qr_8bit_byte.dart';

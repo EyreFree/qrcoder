@@ -2,7 +2,7 @@
 
 [![pub package](https://img.shields.io/pub/v/qrcoder.svg)](https://pub.dartlang.org/packages/qrcoder)
 
-Yet another stupid flutter qrcode plugin, modified from [qrcodejs](https://github.com/davidshimjs/qrcodejs) & [swift_qrcodejs](https://github.com/ApolloZhu/swift_qrcodejs).
+Yet another stupid dart qrcode plugin, modified from [qrcodejs](https://github.com/davidshimjs/qrcodejs) & [swift_qrcodejs](https://github.com/ApolloZhu/swift_qrcodejs).
 
 ## Use
 
@@ -12,7 +12,7 @@ In your `pubspec.yaml`, add the following config:
 
 ```yaml
 dependencies:
-   qrcoder: 0.1.0
+   qrcoder: 0.2.0
 ```
 
 2. Generate

@@ -1,23 +1,34 @@
-import 'package:flutter/services.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:qrcoder/qrcoder.dart';
+import 'package:test/test.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('qrcoder');
 
-  TestWidgetsFlutterBinding.ensureInitialized();
-
-  setUp(() {
-    channel.setMockMethodCallHandler((MethodCall methodCall) async {
-      return '42';
-    });
-  });
-
-  tearDown(() {
-    channel.setMockMethodCallHandler(null);
-  });
-
-  test('getPlatformVersion', () async {
-    expect(await Qrcoder.platformVersion, '42');
+  test('2333', () async {
+    expect(
+        await Qrcoder.generateQRCodeMatrixStringFilledAndPatchedWith('2333', hasBorder: false),
+        '''
+        111111100110001111111
+        100000100100101000001
+        101110100100101011101
+        101110100001101011101
+        101110101111101011101
+        100000100011101000001
+        111111101010101111111
+        000000001010100000000
+        001100111100011010000
+        011011010111110100111
+        011010101111110110101
+        101110000111000000011
+        110000110011000011000
+        000000001100100101010
+        111111101110100011110
+        100000100101010000100
+        101110100101110000111
+        101110101101001010010
+        101110101001000011000
+        100000100101011011001
+        111111100100111100000
+        '''
+    );
   });
 }
